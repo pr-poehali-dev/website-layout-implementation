@@ -399,9 +399,77 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="bg-foreground text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2025 Стоматологический центр «Улыбка». Все права защищены.</p>
+      <footer className="bg-foreground text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Smile" className="text-primary" size={32} />
+                <div>
+                  <h3 className="text-xl font-bold">Улыбка</h3>
+                  <p className="text-xs text-gray-400">стоматологический центр</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-400">
+                Современная стоматология с лучшими специалистами Пензы
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Услуги</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-primary transition-colors">Хирургическая стоматология</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-primary transition-colors">Терапевтическая стоматология</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-primary transition-colors">Ортопедическая стоматология</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-primary transition-colors">Лечение кариеса</button></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Навигация</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><button onClick={() => scrollToSection('main')} className="hover:text-primary transition-colors">Главная</button></li>
+                <li><button onClick={() => scrollToSection('prices')} className="hover:text-primary transition-colors">Цены</button></li>
+                <li><button onClick={() => scrollToSection('doctors')} className="hover:text-primary transition-colors">Врачи</button></li>
+                <li><button onClick={() => scrollToSection('reviews')} className="hover:text-primary transition-colors">Отзывы</button></li>
+                <li><button onClick={() => scrollToSection('contacts')} className="hover:text-primary transition-colors">Контакты</button></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Контакты</h4>
+              <ul className="space-y-3 text-sm text-gray-400">
+                <li className="flex items-start gap-2">
+                  <Icon name="MapPin" size={16} className="mt-1 flex-shrink-0" />
+                  <span>г.Пенза, ул.Московская, 54А</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} className="flex-shrink-0" />
+                  <a href="tel:80084567-89" className="hover:text-primary transition-colors">8(008)45-67-89</a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Mail" size={16} className="flex-shrink-0" />
+                  <a href="mailto:info@smilePenza.ru" className="hover:text-primary transition-colors">info@smilePenza.ru</a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Clock" size={16} className="flex-shrink-0" />
+                  <span>Ежедневно 9:00-21:00</span>
+                </li>
+              </ul>
+              <div className="flex gap-3 mt-4">
+                <Button variant="outline" size="icon" className="rounded-full border-gray-600 hover:border-primary hover:bg-primary/10">
+                  <Icon name="MessageCircle" size={18} />
+                </Button>
+                <Button variant="outline" size="icon" className="rounded-full border-gray-600 hover:border-primary hover:bg-primary/10">
+                  <Icon name="Send" size={18} />
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+            <p>&copy; 2025 Стоматологический центр «Улыбка». Все права защищены.</p>
+          </div>
         </div>
       </footer>
     </div>
